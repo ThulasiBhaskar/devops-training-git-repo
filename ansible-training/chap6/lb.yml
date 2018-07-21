@@ -2,13 +2,7 @@
  - name: Set up load balancer
    hosts: lb
    become: true
-   vars:
-     haproxy_backend_servers:
-        - name: app1
-          address: 192.168.61.12:80
-        - name: app2
-          address: 192.168.61.11:80
-     haproxy_backend_httpchk: ''      
+   
    roles:
      - { role: geerlingguy.haproxy }
    
