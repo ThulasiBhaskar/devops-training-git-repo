@@ -1,0 +1,7 @@
+---
+ - name: Set Mysql and create database
+   hosts: db
+   become: true
+       
+   roles:
+     - { role: geerlingguy.mysql }

@@ -1,0 +1,8 @@
+---
+ - name: add Application configs
+   templates:
+    src: config.ini.j2
+    dest: /var/www/html/app/config.ini
+    owner: apache
+    group: apache
+    mode: 0644

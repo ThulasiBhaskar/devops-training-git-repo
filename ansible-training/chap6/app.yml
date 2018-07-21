@@ -1,0 +1,12 @@
+---
+ - name: Install and start Apache
+   hosts: app
+   become: true
+   vars:
+     fav:
+       fruit: watermelon
+       car: BRIO-v
+   roles:
+     - apache
+     - php
+     - demoApp

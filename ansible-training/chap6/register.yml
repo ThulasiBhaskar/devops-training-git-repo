@@ -1,0 +1,18 @@
+---
+  - name: register variable example
+    hosts: prod
+    gather_facts: false
+    tasks:
+      - name: run a shell command and register result
+        shell: "/sbin/ifconfig eth0"
+        register: result
+
+      - name: print registered variable
+        debug: var=result
+        
+      - name: condition
+        command: uptime
+        when: result.changed ==true
+        
+      - name: Print uptime
+        debug: var=result

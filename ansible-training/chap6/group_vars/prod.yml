@@ -1,0 +1,19 @@
+---
+  fav:
+    color: pink
+    car: BMW
+  mysql_root_password_update: yes
+  mysql_root_password: xyhxyhxyha
+  mysql_databases:
+    - name: devopsdemo
+      encoding: latin1
+      collation: latin1_general_ci
+      
+   
+  mysql_users:
+     - name: devops
+       host: "%"
+       password: devops
+       privs: "devopsdemo.*:ALL"
+       
+  mysql_bind_address:  '0.0.0.0'

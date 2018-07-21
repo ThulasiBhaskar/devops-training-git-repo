@@ -1,0 +1,17 @@
+---
+# defaults file for demoApp
+ app:
+   version: 1.5
+   env: LOCALDEV
+
+ fav:
+   color: white
+   fruit: mango
+   car: chevy
+   laptop: lenovo
+
+ dbcon:
+   host: localhost
+   user: root
+   pwd: changeme
+   db: devopsdemo

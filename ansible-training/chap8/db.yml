@@ -1,0 +1,7 @@
+
+- name: Create DB
+  hosts: db
+  become: yes
+  
+  roles:
+    - { role: geerlingguy.mysql }
